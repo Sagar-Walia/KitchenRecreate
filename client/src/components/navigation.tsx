@@ -15,8 +15,12 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-2">
-            <i className="fas fa-utensils text-warm-orange-600 text-2xl"></i>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/attached_assets/MAK_1754638937992.jpg" 
+              alt="Mom's Approved Kitchen Logo" 
+              className="w-12 h-12 object-contain"
+            />
             <h1 className="text-2xl font-display font-bold text-gray-800">
               Mom's Approved Kitchen
             </h1>

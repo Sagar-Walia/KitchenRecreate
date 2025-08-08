@@ -7,13 +7,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-warm-orange-50 to-warm-orange-100">
+    <section id="home" className="relative min-h-screen flex items-center bg-white">
       <div className="container mx-auto px-4 text-center">
-        <div className="mb-8">
+        <div className="mb-8 bg-white rounded-full p-4 shadow-lg mx-auto w-fit">
           <img 
             src="/attached_assets/MAK_1754638937992.jpg" 
             alt="Mom's Approved Kitchen Logo" 
-            className="mx-auto w-80 h-80 md:w-96 md:h-96 object-contain"
+            className="w-72 h-72 md:w-80 md:h-80 object-contain"
           />
         </div>
         
