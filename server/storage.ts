@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
         description: "A moist and fluffy butter cake made with premium butter and fresh ingredients, offering a rich vanilla flavor that melts in your mouth with every bite.",
         price: 300,
         weight: "500gm",
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        image: "/attached_assets/Butter Cake_1754638035165.jpg",
         category: "desserts"
       },
       {
