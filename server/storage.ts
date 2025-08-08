@@ -25,12 +25,13 @@ export class MemStorage implements IStorage {
 
   private initializeMenuItems() {
     const defaultMenuItems: MenuItem[] = [
+      // Main Menu Items
       {
         id: randomUUID(),
         name: "Chicken Masala",
         description: "Delight in our Chicken Masala, featuring tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
-        price: 300,
-        weight: "Box",
+        price: 350,
+        weight: "500gm",
         image: "https://files.cdn-files-a.com/uploads/11010256/800_687fcef173bb1.jpg",
         category: "main"
       },
@@ -39,7 +40,7 @@ export class MemStorage implements IStorage {
         name: "Matar Paneer",
         description: "A classic North Indian curry dish that combines tender paneer (Indian cottage cheese) and green peas (matar) in a creamy and rich gravy, flavored with aromatic spices for a delightful culinary experience.",
         price: 280,
-        weight: "Box",
+        weight: "500gm",
         image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd0d831813.jpg",
         category: "main"
       },
@@ -48,7 +49,7 @@ export class MemStorage implements IStorage {
         name: "Yogurt Pepper Chicken",
         description: "Tender chicken pieces marinated in creamy yogurt, butter and perfectly spiced with freshly ground black pepper, creating a harmonious blend of brightness and warmth in every bite.",
         price: 320,
-        weight: "Box",
+        weight: "500gm",
         image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd90c47446.jpg",
         category: "main"
       },
@@ -57,44 +58,111 @@ export class MemStorage implements IStorage {
         name: "Kadhai Paneer",
         description: "Kadhai Paneer is a flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with a blend of aromatic spices, bell peppers, and onions, served in a thick, flavorful tomato-based gravy, perfect for pairing with naan or steamed rice.",
         price: 300,
-        weight: "Box",
+        weight: "500gm",
         image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd9bc57dff.jpg",
         category: "main"
       },
+      
+      // Desserts
       {
         id: randomUUID(),
         name: "Fruit Cream",
-        description: "A delightful dessert made with fresh seasonal fruits mixed in rich cream, offering a perfect balance of sweetness and freshness that melts in your mouth.",
-        price: 300,
-        weight: "Box",
+        description: "A delectable dessert comprising a medley of fresh, seasonal fruits gently folded with velvety smooth cream, lightly sweetened to perfection, and served chilled for a refreshing and indulgent finish.",
+        price: 200,
+        weight: "500gm",
         image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         category: "desserts"
       },
       {
         id: randomUUID(),
-        name: "Butter Cake",
-        description: "A moist and fluffy butter cake made with premium butter and fresh ingredients, offering a rich vanilla flavor that melts in your mouth with every bite.",
-        price: 300,
-        weight: "500gm",
-        image: "/attached_assets/Butter Cake_1754638035165.jpg",
+        name: "Gulab Jamun",
+        description: "A classic Indian dessert, warm and luscious deep-fried dough balls soaked in a fragrant rose and cardamom-infused syrup, offering a melt-in-your-mouth sweetness that's perfect for satisfying your dessert cravings. Made with fresh Paneer and Khoya.",
+        price: 30,
+        weight: "Piece",
+        image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         category: "desserts"
       },
       {
         id: randomUUID(),
-        name: "Fresh Mixed Vegetables",
-        description: "A healthy and nutritious mix of freshly sourced seasonal vegetables, lightly seasoned and cooked to perfection, maintaining their natural flavors and nutrients.",
-        price: 180,
-        weight: "Box",
+        name: "Desi Kunafa",
+        description: "A classic Middle Eastern dessert with an Indian twist made of fine shredded pastry, layered with Kesar Elaichi Rabdi, garnished with roasted Pista and Almond.",
+        price: 70,
+        weight: "Piece",
+        image: "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Choco-Walnut Fudge Cake",
+        description: "Indulge in our Choco-Walnut Fudge, a decadent dessert crafted with rich, velvety chocolate and garnished with crunchy, toasted walnuts, creating a harmonious blend of textures and flavors.",
+        price: 700,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Carrot Cake (Eggless)",
+        description: "Delight in our moist and flavorful Carrot Cake, expertly prepared without eggs. Infused with the rich taste of grated carrots, aromatic spices, and a hint of vanilla.",
+        price: 350,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Shahi Tukda",
+        description: "A lavish Indian dessert made of crisp fried bread slices soaked in saffron-infused syrup, topped with Rabdi and coconut shredding.",
+        price: 20,
+        weight: "Piece",
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
+      },
+      
+      // Freshly Made Items
+      {
+        id: randomUUID(),
+        name: "Fresh Home-made Paneer",
+        description: "Experience the delightful flavors of our 'Fresh Home-made Paneer,' crafted daily using traditional techniques to ensure superior taste and texture. Perfectly balanced for any palate.",
+        price: 250,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "fresh"
+      },
+      {
+        id: randomUUID(),
+        name: "Moong Daal Atta Mathri",
+        description: "A delightful crunchy snack crafted with a blend of moong dal flour and whole wheat flour, delicately seasoned with aromatic spices, and fried to perfection. This savory treat pairs wonderfully with tea.",
+        price: 300,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "fresh"
+      },
+      {
+        id: randomUUID(),
+        name: "Dryfruit Murmure Mixture",
+        description: "A delightful blend of crisp murmure (puffed rice) combined with a medley of premium dry fruits, lightly spiced and perfectly roasted to create a harmonious snack that's both delicious and health-conscious.",
+        price: 350,
+        weight: "500gm",
         image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         category: "fresh"
       },
       {
         id: randomUUID(),
-        name: "Fresh Green Salad",
-        description: "A crisp and refreshing salad made with farm-fresh greens, tomatoes, cucumbers, and a light homemade dressing that brings out the natural flavors.",
-        price: 120,
-        weight: "Bowl",
-        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        name: "Matthi",
+        description: "Mathi, also known as mathri, is a popular Indian savory snack, often described as a crispy, fried cracker. It's typically made from a dough of flour and ghee then deep-fried until golden brown. Mathi is a common tea-time snack and is also enjoyed during festivals and special occasions.",
+        price: 200,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "fresh"
+      },
+      {
+        id: randomUUID(),
+        name: "Namak Para",
+        description: "Namak Para is a popular Indian savory snack similar to Mathri, but with an exciting twist - it's enhanced with tangy masala spices that give it a zesty, flavorful kick. These crispy, diamond-shaped treats are made from flour and ghee, then deep-fried until golden brown and seasoned with aromatic spice blends.",
+        price: 200,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1626074353765-517a681e40be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         category: "fresh"
       }
     ];
