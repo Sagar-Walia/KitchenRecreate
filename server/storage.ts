@@ -29,9 +29,9 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Chicken Masala",
         description: "Delight in our Chicken Masala, featuring tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
-        price: 350,
-        weight: "500gm",
-        image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        price: 300,
+        weight: "Box",
+        image: "https://files.cdn-files-a.com/uploads/11010256/800_687fcef173bb1.jpg",
         category: "main"
       },
       {
@@ -39,8 +39,8 @@ export class MemStorage implements IStorage {
         name: "Matar Paneer",
         description: "A classic North Indian curry dish that combines tender paneer (Indian cottage cheese) and green peas (matar) in a creamy and rich gravy, flavored with aromatic spices for a delightful culinary experience.",
         price: 280,
-        weight: "500gm",
-        image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        weight: "Box",
+        image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd0d831813.jpg",
         category: "main"
       },
       {
@@ -48,8 +48,8 @@ export class MemStorage implements IStorage {
         name: "Yogurt Pepper Chicken",
         description: "Tender chicken pieces marinated in creamy yogurt, butter and perfectly spiced with freshly ground black pepper, creating a harmonious blend of brightness and warmth in every bite.",
         price: 320,
-        weight: "500gm",
-        image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        weight: "Box",
+        image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd90c47446.jpg",
         category: "main"
       },
       {
@@ -57,9 +57,18 @@ export class MemStorage implements IStorage {
         name: "Kadhai Paneer",
         description: "Kadhai Paneer is a flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with a blend of aromatic spices, bell peppers, and onions, served in a thick, flavorful tomato-based gravy, perfect for pairing with naan or steamed rice.",
         price: 300,
-        weight: "500gm",
-        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        weight: "Box",
+        image: "https://files.cdn-files-a.com/uploads/11010256/800_687fd9bc57dff.jpg",
         category: "main"
+      },
+      {
+        id: randomUUID(),
+        name: "Fruit Cream",
+        description: "A delightful dessert made with fresh seasonal fruits mixed in rich cream, offering a perfect balance of sweetness and freshness that melts in your mouth.",
+        price: 300,
+        weight: "Box",
+        image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
       }
     ];
 
@@ -82,7 +91,12 @@ export class MemStorage implements IStorage {
 
   async createMenuItem(insertItem: InsertMenuItem): Promise<MenuItem> {
     const id = randomUUID();
-    const item: MenuItem = { ...insertItem, id };
+    const item: MenuItem = { 
+      weight: "Box",
+      category: "main",
+      ...insertItem, 
+      id 
+    };
     this.menuItems.set(id, item);
     return item;
   }
@@ -90,6 +104,7 @@ export class MemStorage implements IStorage {
   async createContact(insertContact: InsertContact): Promise<Contact> {
     const id = randomUUID();
     const contact: Contact = { 
+      phone: null,
       ...insertContact, 
       id,
       createdAt: new Date().toISOString()

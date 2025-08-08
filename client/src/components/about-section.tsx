@@ -25,7 +25,7 @@ export default function AboutSection() {
             <div className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
                   alt="Fresh Ingredients"
                   className="w-full h-full object-cover"
                 />
@@ -41,7 +41,7 @@ export default function AboutSection() {
             <div className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
                   alt="Family Recipes"
                   className="w-full h-full object-cover"
                 />
@@ -57,7 +57,7 @@ export default function AboutSection() {
             <div className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
                   alt="Made with Love"
                   className="w-full h-full object-cover"
                 />
