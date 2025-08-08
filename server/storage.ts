@@ -69,6 +69,33 @@ export class MemStorage implements IStorage {
         weight: "Box",
         image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Butter Cake",
+        description: "A moist and fluffy butter cake made with premium butter and fresh ingredients, offering a rich vanilla flavor that melts in your mouth with every bite.",
+        price: 300,
+        weight: "500gm",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Fresh Mixed Vegetables",
+        description: "A healthy and nutritious mix of freshly sourced seasonal vegetables, lightly seasoned and cooked to perfection, maintaining their natural flavors and nutrients.",
+        price: 180,
+        weight: "Box",
+        image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "fresh"
+      },
+      {
+        id: randomUUID(),
+        name: "Fresh Green Salad",
+        description: "A crisp and refreshing salad made with farm-fresh greens, tomatoes, cucumbers, and a light homemade dressing that brings out the natural flavors.",
+        price: 120,
+        weight: "Bowl",
+        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+        category: "fresh"
       }
     ];
 
