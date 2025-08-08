@@ -1,55 +1,4 @@
-import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactSchema, type InsertContact } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-
 export default function ContactSection() {
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
-
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    },
-  });
-
-  const createContactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contacts", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
-      form.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: InsertContact) => {
-    createContactMutation.mutate(data);
-  };
-
   const handleWhatsAppMessage = () => {
     const message = "Hello! I'd like to place an order";
     const whatsappUrl = `https://wa.me/918095053609?text=${encodeURIComponent(message)}`;
@@ -139,101 +88,25 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form and Map */}
+          {/* Map Section */}
           <div>
             <h3 className="text-2xl font-display font-bold text-gray-800 mb-6">
-              Send us a Message
+              Find Us
             </h3>
-
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mb-8">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder="your@email.com" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Your phone number" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="How can we help you?" 
-                          rows={4}
-                          {...field} 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  disabled={createContactMutation.isPending}
-                  className="w-full bg-warm-orange-600 hover:bg-warm-orange-700"
-                >
-                  {createContactMutation.isPending ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </Form>
-
-            {/* Map Section */}
-            <div>
-              <h4 className="text-lg font-semibold text-gray-800 mb-4">Find Us</h4>
-              <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
-                <div className="text-center text-gray-600">
-                  <i className="fas fa-map text-4xl mb-2"></i>
-                  <p>Interactive map will be displayed here</p>
-                </div>
+            
+            <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
+              <div className="text-center text-gray-600">
+                <i className="fas fa-map text-4xl mb-2"></i>
+                <p>Interactive map will be displayed here</p>
               </div>
-
-              <button
-                onClick={handleDirections}
-                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                <i className="fas fa-directions mr-2"></i>Get Directions
-              </button>
             </div>
+
+            <button
+              onClick={handleDirections}
+              className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300"
+            >
+              <i className="fas fa-directions mr-2"></i>Get Directions
+            </button>
           </div>
         </div>
       </div>

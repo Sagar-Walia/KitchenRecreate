@@ -32,7 +32,7 @@ export class MemStorage implements IStorage {
         description: "Delight in our Chicken Masala, featuring tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
         price: 300,
         weight: "Box",
-        image: "/attached_assets/Chichen Masala_1754638470090.jpg",
+        image: "/attached_assets/Chichen Masala_1754638980431.jpg",
         category: "main"
       },
       {
@@ -41,7 +41,7 @@ export class MemStorage implements IStorage {
         description: "A classic North Indian curry dish that combines tender paneer (Indian cottage cheese) and green peas (matar) in a creamy and rich gravy, flavored with aromatic spices for a delightful culinary experience.",
         price: 280,
         weight: "Box",
-        image: "/attached_assets/Matar Paneer_1754638470090.jpg",
+        image: "/attached_assets/Matar Paneer_1754638980431.jpg",
         category: "main"
       },
       {
@@ -50,7 +50,7 @@ export class MemStorage implements IStorage {
         description: "Tender chicken pieces marinated in creamy yogurt, butter and perfectly spiced with freshly ground black pepper, creating a harmonious blend of brightness and warmth in every bite.",
         price: 320,
         weight: "Box",
-        image: "/attached_assets/Yogurt Pepper Chicken_1754638470090.jpg",
+        image: "/attached_assets/Yogurt Pepper Chicken_1754638980431.jpg",
         category: "main"
       },
       {
@@ -59,7 +59,7 @@ export class MemStorage implements IStorage {
         description: "Kadhai Paneer is a flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with a blend of aromatic spices, bell peppers, and onions, served in a thick, flavorful tomato-based gravy, perfect for pairing with naan or steamed rice.",
         price: 300,
         weight: "Box",
-        image: "/attached_assets/Kadhai Paneer_1754638470090.jpg",
+        image: "/attached_assets/Kadhai Paneer_1754638980431.jpg",
         category: "main"
       },
       
@@ -70,7 +70,7 @@ export class MemStorage implements IStorage {
         description: "A delectable dessert comprising a medley of fresh, seasonal fruits gently folded with velvety smooth cream, lightly sweetened to perfection, and served chilled for a refreshing and indulgent finish.",
         price: 330,
         weight: "500gm",
-        image: "/attached_assets/fruit cream_1754638470090.jpg",
+        image: "/attached_assets/fruit cream_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -79,7 +79,7 @@ export class MemStorage implements IStorage {
         description: "A classic Indian dessert, warm and luscious deep-fried dough balls soaked in a fragrant rose and cardamom-infused syrup, offering a melt-in-your-mouth sweetness that's perfect for satisfying your dessert cravings. Made with fresh Paneer and Khoya.",
         price: 320,
         weight: "500gm",
-        image: "/attached_assets/Gulab Jamun_1754638470090.jpg",
+        image: "/attached_assets/Gulab Jamun_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -88,7 +88,7 @@ export class MemStorage implements IStorage {
         description: "A classic Middle Eastern dessert with an Indian twist made of fine shredded pastry, layered with Kesar Elaichi Rabdi, garnished with roasted Pista and Almond.",
         price: 70,
         weight: "Piece",
-        image: "/attached_assets/Kunafa_1754638470090.jpg",
+        image: "/attached_assets/Kunafa_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -97,7 +97,7 @@ export class MemStorage implements IStorage {
         description: "Indulge in our Choco-Walnut Fudge, a decadent dessert crafted with rich, velvety chocolate and garnished with crunchy, toasted walnuts, creating a harmonious blend of textures and flavors.",
         price: 700,
         weight: "500gm",
-        image: "/attached_assets/Choco Walnut Fudge_1754638470090.jpg",
+        image: "/attached_assets/Choco Walnut Fudge_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -106,7 +106,7 @@ export class MemStorage implements IStorage {
         description: "Delight in our moist and flavorful Carrot Cake, expertly prepared without eggs. Infused with the rich taste of grated carrots, aromatic spices, and a hint of vanilla.",
         price: 350,
         weight: "500gm",
-        image: "/attached_assets/Carrot Cake (Eggless)_1754638470090.jpg",
+        image: "/attached_assets/Carrot Cake (Eggless)_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -115,7 +115,7 @@ export class MemStorage implements IStorage {
         description: "A lavish Indian dessert made of crisp fried bread slices soaked in saffron-infused syrup, topped with Rabdi and coconut shredding.",
         price: 300,
         weight: "500gm",
-        image: "/attached_assets/Shahi Tukda_1754638470090.jpg",
+        image: "/attached_assets/Shahi Tukda_1754638980431.jpg",
         category: "desserts"
       },
       {
@@ -124,7 +124,7 @@ export class MemStorage implements IStorage {
         description: "A moist and fluffy butter cake made with premium butter and fresh ingredients, offering a rich vanilla flavor that melts in your mouth with every bite.",
         price: 300,
         weight: "500gm",
-        image: "/attached_assets/Butter Cake_1754638470090.jpg",
+        image: "/attached_assets/Butter Cake_1754638980431.jpg",
         category: "desserts"
       },
       
@@ -135,7 +135,7 @@ export class MemStorage implements IStorage {
         description: "Experience the delightful flavors of our 'Fresh Home-made Paneer,' crafted daily using traditional techniques to ensure superior taste and texture. Perfectly balanced for any palate.",
         price: 250,
         weight: "500gm",
-        image: "/attached_assets/Paneer_1754638470090.jpg",
+        image: "/attached_assets/Paneer_1754638980431.jpg",
         category: "fresh"
       },
       {
@@ -144,7 +144,7 @@ export class MemStorage implements IStorage {
         description: "A delightful crunchy snack crafted with a blend of moong dal flour and whole wheat flour, delicately seasoned with aromatic spices, and fried to perfection. This savory treat pairs wonderfully with tea.",
         price: 300,
         weight: "500gm",
-        image: "/attached_assets/Moong Daal Atta Mathri_1754638470090.jpg",
+        image: "/attached_assets/Moong Daal Atta Mathri_1754638980431.jpg",
         category: "fresh"
       },
       {
@@ -153,7 +153,7 @@ export class MemStorage implements IStorage {
         description: "A delightful blend of crisp murmure (puffed rice) combined with a medley of premium dry fruits, lightly spiced and perfectly roasted to create a harmonious snack that's both delicious and health-conscious.",
         price: 350,
         weight: "500gm",
-        image: "/attached_assets/Dryfruit Murmure mixture_1754638470090.jpg",
+        image: "/attached_assets/Dryfruit Murmure mixture_1754638980431.jpg",
         category: "fresh"
       },
       {
@@ -162,7 +162,7 @@ export class MemStorage implements IStorage {
         description: "Mathi, also known as mathri, is a popular Indian savory snack, often described as a crispy, fried cracker. It's typically made from a dough of flour and ghee then deep-fried until golden brown. Mathi is a common tea-time snack and is also enjoyed during festivals and special occasions.",
         price: 200,
         weight: "500gm",
-        image: "/attached_assets/Matthi_1754638470090.jpg",
+        image: "/attached_assets/Matthi_1754638980431.jpg",
         category: "fresh"
       },
       {
@@ -171,7 +171,7 @@ export class MemStorage implements IStorage {
         description: "Namak Para is a popular Indian savory snack similar to Mathri, but with an exciting twist - it's enhanced with tangy masala spices that give it a zesty, flavorful kick. These crispy, diamond-shaped treats are made from flour and ghee, then deep-fried until golden brown and seasoned with aromatic spice blends.",
         price: 200,
         weight: "500gm",
-        image: "/attached_assets/Namak Paare_1754638470090.jpg",
+        image: "/attached_assets/Namak Paare_1754638980431.jpg",
         category: "fresh"
       }
     ];

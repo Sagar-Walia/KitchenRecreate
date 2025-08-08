@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 text-center">
         <div className="mb-8">
           <img 
-            src="/attached_assets/MAK_1754638144782.jpg" 
+            src="/attached_assets/MAK_1754638937992.jpg" 
             alt="Mom's Approved Kitchen Logo" 
             className="mx-auto w-80 h-80 md:w-96 md:h-96 object-contain"
           />

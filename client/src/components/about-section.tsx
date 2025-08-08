@@ -57,7 +57,7 @@ export default function AboutSection() {
             <div className="text-center">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                  src="/attached_assets/Gulab Jamun_1754638980431.jpg"
                   alt="Made with Love"
                   className="w-full h-full object-cover"
                 />
