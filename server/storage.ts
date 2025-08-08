@@ -30,8 +30,8 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Chicken Masala",
         description: "Delight in our Chicken Masala, featuring tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
-        price: 350,
-        weight: "500gm",
+        price: 300,
+        weight: "Box",
         image: "/attached_assets/Chichen Masala_1754638470090.jpg",
         category: "main"
       },
@@ -40,7 +40,7 @@ export class MemStorage implements IStorage {
         name: "Matar Paneer",
         description: "A classic North Indian curry dish that combines tender paneer (Indian cottage cheese) and green peas (matar) in a creamy and rich gravy, flavored with aromatic spices for a delightful culinary experience.",
         price: 280,
-        weight: "500gm",
+        weight: "Box",
         image: "/attached_assets/Matar Paneer_1754638470090.jpg",
         category: "main"
       },
@@ -49,7 +49,7 @@ export class MemStorage implements IStorage {
         name: "Yogurt Pepper Chicken",
         description: "Tender chicken pieces marinated in creamy yogurt, butter and perfectly spiced with freshly ground black pepper, creating a harmonious blend of brightness and warmth in every bite.",
         price: 320,
-        weight: "500gm",
+        weight: "Box",
         image: "/attached_assets/Yogurt Pepper Chicken_1754638470090.jpg",
         category: "main"
       },
@@ -58,7 +58,7 @@ export class MemStorage implements IStorage {
         name: "Kadhai Paneer",
         description: "Kadhai Paneer is a flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with a blend of aromatic spices, bell peppers, and onions, served in a thick, flavorful tomato-based gravy, perfect for pairing with naan or steamed rice.",
         price: 300,
-        weight: "500gm",
+        weight: "Box",
         image: "/attached_assets/Kadhai Paneer_1754638470090.jpg",
         category: "main"
       },
@@ -68,7 +68,7 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Fruit Cream",
         description: "A delectable dessert comprising a medley of fresh, seasonal fruits gently folded with velvety smooth cream, lightly sweetened to perfection, and served chilled for a refreshing and indulgent finish.",
-        price: 200,
+        price: 330,
         weight: "500gm",
         image: "/attached_assets/fruit cream_1754638470090.jpg",
         category: "desserts"
@@ -77,8 +77,8 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Gulab Jamun",
         description: "A classic Indian dessert, warm and luscious deep-fried dough balls soaked in a fragrant rose and cardamom-infused syrup, offering a melt-in-your-mouth sweetness that's perfect for satisfying your dessert cravings. Made with fresh Paneer and Khoya.",
-        price: 30,
-        weight: "Piece",
+        price: 320,
+        weight: "500gm",
         image: "/attached_assets/Gulab Jamun_1754638470090.jpg",
         category: "desserts"
       },
@@ -113,9 +113,18 @@ export class MemStorage implements IStorage {
         id: randomUUID(),
         name: "Shahi Tukda",
         description: "A lavish Indian dessert made of crisp fried bread slices soaked in saffron-infused syrup, topped with Rabdi and coconut shredding.",
-        price: 20,
-        weight: "Piece",
+        price: 300,
+        weight: "500gm",
         image: "/attached_assets/Shahi Tukda_1754638470090.jpg",
+        category: "desserts"
+      },
+      {
+        id: randomUUID(),
+        name: "Butter Cake",
+        description: "A moist and fluffy butter cake made with premium butter and fresh ingredients, offering a rich vanilla flavor that melts in your mouth with every bite.",
+        price: 300,
+        weight: "500gm",
+        image: "/attached_assets/Butter Cake_1754638470090.jpg",
         category: "desserts"
       },
       
