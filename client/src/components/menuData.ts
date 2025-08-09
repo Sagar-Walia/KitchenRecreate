@@ -16,7 +16,7 @@ const menuData: MenuItem[] = [
     id: 1,
     name: "Chicken Masala",
     description: "Tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
-    price: 350,
+    price: 300,
     weight: "box",
     image: "attached_assets/chicken_masala.jpg",
     category: "main"
@@ -63,7 +63,7 @@ const menuData: MenuItem[] = [
     id: 6,
     name: "Gulab Jamun",
     description: "Warm and luscious deep-fried dough balls soaked in a fragrant rose and cardamom-infused syrup. Made with fresh Paneer and Khoya.",
-    price: 300,
+    price: 320,
     weight: "500gm",
     image: "attached_assets/gulab_jamun.jpg",
     category: "desserts"
