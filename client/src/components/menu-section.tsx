@@ -1,14 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
+import menuData from "./menuData";
 import { useState } from "react";
-import type { MenuItem } from "@shared/schema";
+import type { MenuItem } from "./menuData";
 
 export default function MenuSection() {
-  console.log(menuData);
   const [activeCategory, setActiveCategory] = useState("main");
-
-  const { data: menuItems, isLoading } = useQuery<MenuItem[]>({
-    queryKey: ["/api/menu-items"],
-  });
 
   const handleWhatsAppOrder = (itemName: string, price: number) => {
     const message = `Hello! I'd like to order ${itemName} (₹${price}). Please let me know the availability and delivery details.`;
@@ -20,36 +15,7 @@ export default function MenuSection() {
     window.open("/menu-pdf", "_blank");
   };
 
-  if (isLoading) {
-    return (
-      <section id="menu" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-4">
-              Mom's Menu
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Craft your perfect meals effortlessly with authentic home-cooked dishes
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-lg overflow-hidden animate-pulse">
-                <div className="w-full h-64 bg-gray-200"></div>
-                <div className="p-6">
-                  <div className="h-6 bg-gray-200 rounded mb-3"></div>
-                  <div className="h-16 bg-gray-200 rounded mb-4"></div>
-                  <div className="h-12 bg-gray-200 rounded"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  const filteredItems = menuItems?.filter(item => item.category === activeCategory) || [];
+  const filteredItems = menuData.filter(item => item.category === activeCategory);
 
   return (
     <section id="menu" className="py-16 bg-white">
