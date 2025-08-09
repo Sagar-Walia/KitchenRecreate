@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom's Approved Kitchen - Authentic Home-Cooked Indian Meals</title>
+    <meta name="description" content="Experience authentic home-cooked Indian meals made with love. Fresh ingredients, family recipes, and the warmth of home cooking in Bengaluru.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-orange': {
+                            50: '#FFF7ED',
+                            100: '#FFEDD5',
+                            200: '#FED7AA',
+                            300: '#FDBA74',
+                            400: '#FB923C',
+                            500: '#F97316',
+                            600: '#EA580C',
+                            700: '#C2410C',
+                            800: '#9A3412',
+                            900: '#7C2D12'
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                        'body': ['system-ui', '-apple-system', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-body bg-warm-orange-50">
+    
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [sticky header with smooth scroll links] -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-utensils text-warm-orange-600 text-2xl"></i>
+                    <h1 class="text-2xl font-display font-bold text-gray-800">Mom's Approved Kitchen</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Home</a>
+                    <a href="#menu" class="text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Menu</a>
+                    <a href="#about" class="text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">About Us</a>
+                    <a href="#contact" class="text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-warm-orange-600" data-event="click:toggleMobileMenu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <!-- @STATE: mobileMenuOpen:boolean = false -->
+            <div class="md:hidden bg-white border-t" data-bind="mobileMenuOpen" style="display: none;">
+                <div class="py-4 space-y-4">
+                    <a href="#home" class="block text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Home</a>
+                    <a href="#menu" class="block text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Menu</a>
+                    <a href="#about" class="block text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">About Us</a>
+                    <a href="#contact" class="block text-gray-700 hover:text-warm-orange-600 transition-colors duration-300" data-event="click:smoothScroll">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection [main landing area with CTA] -->
+    <section id="home" class="relative min-h-screen flex items-center">
+        <!-- A warm, inviting Indian restaurant interior with orange lighting and traditional decor -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');"></div>
+        
+        <div class="relative container mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-display font-bold mb-6">
+                Welcome to<br>
+                <span class="text-warm-orange-400">Mom's Approved Kitchen</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Where every dish is made with love, just like mom used to make. Experience authentic home-cooked meals that warm your heart and satisfy your soul.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-warm-orange-600 hover:bg-warm-orange-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105" data-event="click:smoothScroll">
+                    <i class="fas fa-utensils mr-2"></i>View Our Menu
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-800 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300" data-event="click:smoothScroll">
+                    <i class="fas fa-phone mr-2"></i>Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- Menu Section -->
+    <!-- @COMPONENT: MenuSection [display dishes with images and pricing] -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-4">Mom's Menu</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Craft your perfect meals effortlessly with authentic home-cooked dishes
+                </p>
+            </div>
+            
+            <!-- Menu Categories -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-warm-orange-100 rounded-full p-2 flex space-x-1">
+                    <button class="px-6 py-2 rounded-full bg-warm-orange-600 text-white font-semibold" data-event="click:filterMenu" data-category="main">
+                        Main Menu
+                    </button>
+                    <button class="px-6 py-2 rounded-full text-warm-orange-600 hover:bg-warm-orange-200 font-semibold transition-colors duration-300" data-event="click:filterMenu" data-category="desserts">
+                        Desserts
+                    </button>
+                    <button class="px-6 py-2 rounded-full text-warm-orange-600 hover:bg-warm-orange-200 font-semibold transition-colors duration-300" data-event="click:filterMenu" data-category="fresh">
+                        Freshly made
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Main Menu Items -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <!-- @MAP: menuItems.map(item => ( -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-mock="true">
+                    <!-- Authentic chicken masala curry with rich aromatic spices and tender chicken pieces -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Chicken Masala" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-warm-orange-600 text-white px-3 py-1 rounded-full font-bold">
+                            ₹350<span class="text-sm">/500gm</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-gray-800 mb-3" data-bind="item.name">Chicken Masala</h3>
+                        <p class="text-gray-600 leading-relaxed" data-bind="item.description">
+                            Delight in our Chicken Masala, featuring tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.
+                        </p>
+                        <button class="mt-4 w-full bg-warm-orange-100 hover:bg-warm-orange-200 text-warm-orange-700 py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:addToOrder" data-implementation="Should integrate with WhatsApp ordering">
+                            <i class="fab fa-whatsapp mr-2"></i>Order via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-mock="true">
+                    <!-- Classic North Indian matar paneer curry with cottage cheese and green peas -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Matar Paneer" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-warm-orange-600 text-white px-3 py-1 rounded-full font-bold">
+                            ₹280<span class="text-sm">/500gm</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-gray-800 mb-3" data-bind="item.name">Matar Paneer</h3>
+                        <p class="text-gray-600 leading-relaxed" data-bind="item.description">
+                            A classic North Indian curry dish that combines tender paneer (Indian cottage cheese) and green peas (matar) in a creamy and rich gravy, flavored with aromatic spices for a delightful culinary experience.
+                        </p>
+                        <button class="mt-4 w-full bg-warm-orange-100 hover:bg-warm-orange-200 text-warm-orange-700 py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:addToOrder">
+                            <i class="fab fa-whatsapp mr-2"></i>Order via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-mock="true">
+                    <!-- Creamy yogurt pepper chicken with aromatic spices and black pepper -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Yogurt Pepper Chicken" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-warm-orange-600 text-white px-3 py-1 rounded-full font-bold">
+                            ₹320<span class="text-sm">/500gm</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-gray-800 mb-3" data-bind="item.name">Yogurt Pepper Chicken</h3>
+                        <p class="text-gray-600 leading-relaxed" data-bind="item.description">
+                            Tender chicken pieces marinated in creamy yogurt, butter and perfectly spiced with freshly ground black pepper, creating a harmonious blend of brightness and warmth in every bite.
+                        </p>
+                        <button class="mt-4 w-full bg-warm-orange-100 hover:bg-warm-orange-200 text-warm-orange-700 py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:addToOrder">
+                            <i class="fab fa-whatsapp mr-2"></i>Order via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-mock="true">
+                    <!-- Flavorful kadhai paneer with cottage cheese, bell peppers and aromatic spices -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Kadhai Paneer" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-warm-orange-600 text-white px-3 py-1 rounded-full font-bold">
+                            ₹300<span class="text-sm">/500gm</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-display font-bold text-gray-800 mb-3" data-bind="item.name">Kadhai Paneer</h3>
+                        <p class="text-gray-600 leading-relaxed" data-bind="item.description">
+                            Kadhai Paneer is a flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with a blend of aromatic spices, bell peppers, and onions, served in a thick, flavorful tomato-based gravy, perfect for pairing with naan or steamed rice.
+                        </p>
+                        <button class="mt-4 w-full bg-warm-orange-100 hover:bg-warm-orange-200 text-warm-orange-700 py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:addToOrder">
+                            <i class="fab fa-whatsapp mr-2"></i>Order via WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+                
+            </div>
+            
+            <!-- Menu PDF Download -->
+            <div class="text-center mt-12">
+                <a href="https://mom-s-approved-kitchen-webs-54.created.app/menu-pdf" class="inline-flex items-center bg-warm-orange-600 hover:bg-warm-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:downloadMenu">
+                    <i class="fas fa-download mr-2"></i>Download Menu PDF
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: MenuSection -->
+
+    <!-- About Section -->
+    <!-- @COMPONENT: AboutSection [story and values] -->
+    <section id="about" class="py-16 bg-warm-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-6">About Us</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                        Mom's Approved Kitchen was born from a simple belief: that the best meals are made with love, fresh ingredients, and time-honored recipes passed down through generations.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Our founder, inspired by her grandmother's cooking, wanted to create a place where families could enjoy authentic home-cooked meals without the hassle of cooking. Every dish is prepared with the same care and attention you'd find in a loving home kitchen.
+                    </p>
+                </div>
+                
+                <!-- Values Grid -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <!-- Fresh vegetables and ingredients arranged beautifully on a kitchen counter -->
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Fresh Ingredients" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Fresh Ingredients</h3>
+                        <p class="text-gray-600">We source our ingredients locally and prepare everything fresh daily.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <!-- Traditional Indian family kitchen with grandmother cooking with love -->
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Family Recipes" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Family Recipes</h3>
+                        <p class="text-gray-600">Our recipes have been passed down through generations of home cooks.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <!-- Warm hands preparing food with care and love in a homestyle kitchen -->
+                        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Made with Love" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-gray-800 mb-3">Made with Love</h3>
+                        <p class="text-gray-600">Every dish is prepared with the same care you'd find at home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- Contact Section -->
+    <!-- @COMPONENT: ContactSection [location, contact info, map integration] -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-800 mb-4">Contact & Location</h2>
+                <p class="text-xl text-gray-600">Visit us today and taste the difference love makes</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-gray-800 mb-6">Get in Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-warm-orange-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-600" data-bind="restaurant.address">
+                                    Swarna Bhavan, 132, KVP Nagar, Singapura, Bengaluru, Karnataka 560097, India
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone text-warm-orange-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Phone</h4>
+                                <a href="tel:+918095053609" class="text-warm-orange-600 hover:text-warm-orange-700" data-bind="restaurant.phone">
+                                    +91 8095053609
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-envelope text-warm-orange-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Email</h4>
+                                <a href="mailto:momsapprovedkitchen@gmail.com" class="text-warm-orange-600 hover:text-warm-orange-700" data-bind="restaurant.email">
+                                    momsapprovedkitchen@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="mt-8 space-y-4">
+                        <a href="https://wa.me/918095053609?text=Hello!%20I%27d%20like%20to%20place%20an%20order" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:openWhatsApp">
+                            <i class="fab fa-whatsapp mr-2"></i>Send WhatsApp Message
+                        </a>
+                        
+                        <a href="https://mom-s-approved-kitchen-webs-54.created.app/menu-pdf" class="block w-full bg-warm-orange-600 hover:bg-warm-orange-700 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:downloadMenu">
+                            <i class="fas fa-download mr-2"></i>Download Menu PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div>
+                    <h3 class="text-2xl font-display font-bold text-gray-800 mb-6">Find Us</h3>
+                    
+                    <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4" data-implementation="Integrate Google Maps API here">
+                        <div class="text-center text-gray-600">
+                            <i class="fas fa-map text-4xl mb-2"></i>
+                            <p>Map will be displayed here</p>
+                            <!-- TODO: Implement Google Maps integration -->
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/hpLpNCuXVZ7FvmYa6" target="_blank" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300" data-event="click:openDirections">
+                        <i class="fas fa-directions mr-2"></i>Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [simple footer with copyright] -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 mb-4">
+                    <i class="fas fa-utensils text-warm-orange-500 text-2xl"></i>
+                    <h3 class="text-2xl font-display font-bold">Mom's Approved Kitchen</h3>
+                </div>
+                <p class="text-gray-400 mb-4">Made with love, served with care</p>
+                <p class="text-gray-500 text-sm">
+                    © 2024 Mom's Approved Kitchen. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- Floating WhatsApp Button (Mobile) -->
+    <!-- @COMPONENT: FloatingWhatsApp [mobile-optimized floating action button] -->
+    <div class="fixed bottom-6 right-6 z-50 md:hidden">
+        <a href="https://wa.me/918095053609?text=Hello!%20I%27d%20like%20to%20place%20an%20order" target="_blank" class="bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform hover:scale-110" data-event="click:openWhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+    <!-- @END_COMPONENT: FloatingWhatsApp -->
+
+    <script>
+        // Smooth scrolling functionality
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.querySelector('[data-bind="mobileMenuOpen"]');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isOpen = mobileMenu.style.display !== 'none';
+                    mobileMenu.style.display = isOpen ? 'none' : 'block';
+                });
+            }
+
+            // Menu category filtering (placeholder)
+            document.querySelectorAll('[data-event="click:filterMenu"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('[data-event="click:filterMenu"]').forEach(btn => {
+                        btn.className = btn.className.replace('bg-warm-orange-600 text-white', 'text-warm-orange-600 hover:bg-warm-orange-200');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.className = 'px-6 py-2 rounded-full bg-warm-orange-600 text-white font-semibold';
+                    
+                    // TODO: Implement menu filtering logic
+                });
+            });
+
+            // Order button functionality (placeholder)
+            document.querySelectorAll('[data-event="click:addToOrder"]').forEach(button => {
+                button.addEventListener('click', function() {
+                    // TODO: Implement order functionality with WhatsApp integration
+                    window.open('https://wa.me/918095053609?text=Hello!%20I%27d%20like%20to%20place%20an%20order', '_blank');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
