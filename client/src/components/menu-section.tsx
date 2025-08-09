@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { MenuItem } from "@shared/schema";
 
 export default function MenuSection() {
+  console.log(menuData);
   const [activeCategory, setActiveCategory] = useState("main");
 
   const { data: menuItems, isLoading } = useQuery<MenuItem[]>({
