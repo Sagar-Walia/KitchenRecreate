@@ -11,9 +11,7 @@ export default function MenuSection() {
     window.open(whatsappUrl, "_blank");
   };
 
-  const handleMenuDownload = () => {
-    window.open("/menu-pdf", "_blank");
-  };
+
 
   const filteredItems = menuData.filter(item => item.category === activeCategory);
 
@@ -107,15 +105,7 @@ export default function MenuSection() {
           </div>
         )}
 
-        {/* Menu PDF Download */}
-        <div className="text-center mt-12">
-          <button
-            onClick={handleMenuDownload}
-            className="inline-flex items-center bg-warm-orange-600 hover:bg-warm-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
-          >
-            <i className="fas fa-download mr-2"></i>Download Menu PDF
-          </button>
-        </div>
+
       </div>
     </section>
   );
