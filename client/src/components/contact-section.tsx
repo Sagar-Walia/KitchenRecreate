@@ -87,11 +87,17 @@ export default function ContactSection() {
               Find Us
             </h3>
             
-            <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-4">
-              <div className="text-center text-gray-600">
-                <i className="fas fa-map text-4xl mb-2"></i>
-                <p>Interactive map will be displayed here</p>
-              </div>
+            <div className="rounded-lg h-48 mb-4 overflow-hidden shadow-lg">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1234567890123!2d77.12345678901234!3d12.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae123456789012%3A0x1234567890123456!2sSwarna%20Bhavan%2C%20132%2C%20KVP%20Nagar%2C%20Singapura%2C%20Bengaluru%2C%20Karnataka%20560097%2C%20India!5e0!3m2!1sen!2sin!4v1234567890123"
+                width="100%" 
+                height="100%" 
+                style={{border: 0}} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Mom's Approved Kitchen Location"
+              ></iframe>
             </div>
 
             <button
