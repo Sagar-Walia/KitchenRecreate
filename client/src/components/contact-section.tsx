@@ -5,9 +5,7 @@ export default function ContactSection() {
     window.open(whatsappUrl, "_blank");
   };
 
-  const handleMenuDownload = () => {
-    window.open("/menu-pdf", "_blank");
-  };
+
 
   const handleDirections = () => {
     window.open("https://maps.app.goo.gl/hpLpNCuXVZ7FvmYa6", "_blank");
@@ -79,12 +77,7 @@ export default function ContactSection() {
                 <i className="fab fa-whatsapp mr-2"></i>Send WhatsApp Message
               </button>
 
-              <button
-                onClick={handleMenuDownload}
-                className="block w-full bg-warm-orange-600 hover:bg-warm-orange-700 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                <i className="fas fa-download mr-2"></i>Download Menu PDF
-              </button>
+
             </div>
           </div>
 
