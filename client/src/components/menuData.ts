@@ -51,7 +51,7 @@ const menuData: MenuItem[] = [
   {
     id: 17,
     name: "Kaju Masala",
-    description: " Rich and creamy North Indian curry that features roasted cashews in a spicy, flavorful gravy. The dish is a popular choice in Indian restaurants and is often considered a "special occasion" meal due to its decadent taste and texture.",
+    description: description: "Rich and creamy North Indian curry that features roasted cashews in a spicy, flavorful gravy. The dish is a popular choice in Indian restaurants and is often considered a special meal due to its decadent taste and texture.",
     price: 300,
     weight: "box",
     image: "attached_assets/kaju_masala.jpg",
