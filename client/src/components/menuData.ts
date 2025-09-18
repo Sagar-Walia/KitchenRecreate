@@ -17,7 +17,7 @@ const menuData: MenuItem[] = [
     name: "Chicken Masala",
     description: "Tender chicken pieces simmered in a rich aromatic sauce infused with a symphony of traditional Indian spices.",
     price: 300,
-    weight: "box",
+    weight: "500gm",
     image: "attached_assets/chicken_masala.jpg",
     category: "main"
   },
@@ -25,8 +25,8 @@ const menuData: MenuItem[] = [
     id: 2,
     name: "Matar Paneer",
     description: "A classic North Indian curry that combines tender paneer and green peas in a creamy and rich gravy.",
-    price: 280,
-    weight: "box",
+    price: 250,
+    weight: "500gm",
     image: "attached_assets/matar_paneer.jpg",
     category: "main"
   },
@@ -34,8 +34,8 @@ const menuData: MenuItem[] = [
     id: 3,
     name: "Yogurt Pepper Chicken",
     description: "Tender chicken pieces marinated in creamy yogurt and perfectly spiced with freshly ground black pepper.",
-    price: 320,
-    weight: "box",
+    price: 350,
+    weight: "500gm",
     image: "attached_assets/yogurt_pepper_chicken.jpg",
     category: "main"
   },
@@ -44,7 +44,7 @@ const menuData: MenuItem[] = [
     name: "Kadhai Paneer",
     description: "A flavorful Indian dish featuring succulent cubes of cottage cheese stir-fried with bell peppers and onions, served in a thick, flavorful tomato-based gravy.",
     price: 300,
-    weight: "box",
+    weight: "500gm",
     image: "attached_assets/kadhai_paneer.jpg",
     category: "main"
   },
@@ -53,10 +53,20 @@ const menuData: MenuItem[] = [
     name: "Kaju Masala",
     description: " Rich and creamy curry that features roasted cashews in a spicy, flavorful gravy. The dish is a popular choice in Indian restaurants and is often considered a special meal due to its decadent taste and texture.",
     price: 300,
-    weight: "box",
+    weight: "500gm",
     image: "attached_assets/kaju_masala.jpg",
     category: "main"
   },
+   {
+    id: 18,
+    name: "Punjabi Chole",
+    description: " a popular North Indian dish of spiced chickpeas cooked in a flavorful gravy made with onions, tomatoes, ginger, garlic, and a blend of Indian spices.",
+    price: 150,
+    weight: "500gm",
+    image: "attached_assets/Punjabi_Chole.jpg",
+    category: "main"
+  },
+  
 
   // Desserts
   {
@@ -72,7 +82,7 @@ const menuData: MenuItem[] = [
     id: 6,
     name: "Gulab Jamun",
     description: "Warm and luscious deep-fried dough balls soaked in a fragrant rose and cardamom-infused syrup. Made with fresh Paneer and Khoya.",
-    price: 320,
+    price: 325,
     weight: "500gm",
     image: "attached_assets/gulab_jamun.jpg",
     category: "desserts"
@@ -120,6 +130,42 @@ const menuData: MenuItem[] = [
     price: 300,
     weight: "500gm",
     image: "attached_assets/butter_cake.jpg",
+    category: "desserts"
+  },
+  {
+    id: 19,
+    name: "Gud Paare",
+    description: " Gud paare is a traditional Indian sweet snack made from fried dough pieces coated in jaggery syrup, offering a crispy texture with a sweet, earthy flavor.",
+    price: 225,
+    weight: "500gm",
+    image: "attached_assets/Gud_Paare.jpg",
+    category: "desserts"
+  },
+  {
+    id: 20,
+    name: "Gujiya",
+    description: " Gujiyas are sweet dumplings made of maida or flour and filled with a delightful khoya and dry fruits mixture.",
+    price: 300,
+    weight: "500gm",
+    image: "attached_assets/Gujiya.jpg",
+    category: "desserts"
+  },
+  {
+    id: 21,
+    name: "Shakkar paare",
+    description: " Shakkarpara are sweet and crispy diamond-shaped snacks made by deep frying dough of refined wheat flour, sugar and ghee.",
+    price: 225,
+    weight: "500gm",
+    image: "attached_assets/Shakkar_Paare.jpg",
+    category: "desserts"
+  },
+  {
+    id: 22,
+    name: "Kalakand",
+    description: " a traditional Indian sweet, also known as "milk cake," with a distinctive soft, creamy, and grainy texture that melts in the mouth.",
+    price: 300,
+    weight: "500gm",
+    image: "attached_assets/Kalakand.jpg",
     category: "desserts"
   },
 
