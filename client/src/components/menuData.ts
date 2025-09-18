@@ -162,7 +162,7 @@ const menuData: MenuItem[] = [
   {
     id: 22,
     name: "Kalakand",
-    description: " a traditional Indian sweet, also known as "milk cake," with a distinctive soft, creamy, and grainy texture that melts in the mouth.",
+    description: " a traditional Indian sweet, also known as milk cake with a distinctive soft, creamy, and grainy texture that melts in the mouth.",
     price: 300,
     weight: "500gm",
     image: "attached_assets/Kalakand.jpg",
